@@ -22,3 +22,26 @@ input,textarea { font-size:16px !important; }
 @media(max-width:640px) { main h1 { font-size:clamp(2.3rem,9.2vw,3.6rem)!important; } main h2 { font-size:clamp(2rem,8vw,4rem)!important; } header { padding-top:1rem!important;padding-bottom:1rem!important; } }
 
 @media(max-width:640px) { .bourn-hero-image { object-position:75% center; } }
+
+/* Header links share a single vertical centre, including the pill CTA. */
+header nav > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  min-height: 44px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+header a[aria-label="BOURN. home"] {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.25;
+}
+/* Opaque ink avoids bright intersections between overlapping serif glyphs. */
+main > section:first-of-type h1 > span {
+  color: #96938f;
+  letter-spacing: -0.025em;
+}
