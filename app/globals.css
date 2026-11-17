@@ -41,7 +41,7 @@ header a[aria-label="BOURN. home"] {
   line-height: 1.25;
 }
 /* Opaque ink avoids bright intersections between overlapping serif glyphs. */
-main > section:first-of-type h1 > span {
+section:has(> .bourn-hero-image) h1 > span {
   color: #96938f;
   letter-spacing: -0.025em;
 }
