@@ -12,4 +12,5 @@ writeFileSync(join(stage,'app/auth/page.tsx'),`import Link from 'next/link';expo
 function walk(dir){for(const entry of readdirSync(dir,{withFileTypes:true})){const p=join(dir,entry.name);if(entry.isDirectory())walk(p);else if(p.endsWith('.tsx')){let s=readFileSync(p,'utf8').replaceAll('manifest: "/manifest.webmanifest"',`manifest: "${base}/manifest.webmanifest"`).replaceAll('src="/images/',`src="${base}/images/`).replaceAll('<a\n','<Link\n').replaceAll('<a ','<Link ').replaceAll('</a>','</Link>');writeFileSync(p,s);}}}walk(join(stage,'app'));
 writeFileSync(join(stage,'next.config.ts'),`export default {output:'export',trailingSlash:true,basePath:${JSON.stringify(base)},images:{unoptimized:true}};`);
 execFileSync(process.execPath,[resolve(root,'node_modules/next/dist/bin/next'),'build'],{cwd:stage,stdio:'inherit',env:{...process.env,NEXT_TELEMETRY_DISABLED:'1'}});
+cpSync(resolve(root,'scripts/responsive-preview.html'),join(stage,'out/responsive-preview.html'));
 console.log('Static preview:',join(stage,'out'));

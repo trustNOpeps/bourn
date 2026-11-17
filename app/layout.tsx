@@ -1,9 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/libre-baskerville/400.css";
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/libre-baskerville/latin-400.css";
 import "./globals.css";
 export const metadata: Metadata = {
  title: "BOURN — Beyond destinations.",

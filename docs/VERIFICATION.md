@@ -1,19 +1,18 @@
 # Verification — 17 November 2026
 
-- ESLint: passed, no findings after final changes.
-- Node planner tests: 3 passed; covers invalid dates, leap dates, reverse dates, traveller limits, area selection, estimate totals and over-budget feedback.
-- Production build and TypeScript: passed.
-- Static preview build: passed.
-- Credential-pattern scan of staged text source: no matches. Original .env.local was never copied into the source package.
-- Visual/mobile browser tests: NOT completed. Local Chromium launch failed due to environment socket restrictions; browser download also failed. CSS responsiveness is implemented but not visually certified.
-- Live Supabase auth/RLS, real submissions, payment and admin workflow: NOT tested or deployed.
+- ESLint: passed.
+- Planner unit tests: 3 passed (calendar validity, leap dates, traveller limits, recommendation, cost sum and budget mismatch).
+- Production build, TypeScript and static export: passed.
+- Public six-step journey: exercised in Chrome from dates through group, interests, area/stay/transport, budget and notes to result.
+- Example: 1–8 December 2026, two travellers, culture/nature, undecided area, villa, private driver, under Rp5M: Ubud, Rp13,350,000 illustrative total and over-budget notice.
+- Brief download triggered and success state observed. Free-text test note absent from result URL.
+- Responsive iframe inspection: 360px and 390px frame widths; homepage and date planner have no horizontal overflow. Desktop homepage and result reviewed. This is not a complete physical-device/browser matrix.
+- Live Supabase auth/RLS, actual concierge fulfilment, payment and admin workflow: not enabled or verified.
+- Original .env.local, credentials, customer records and dependencies are excluded from source publication.
 
-## Publication status
-The public repository trustNOpeps/bourn was created successfully, with its initial README. Public disclosure was explicitly authorized on 17 November 2026. Publication is in progress. No completed deployment is claimed. The source and static demo in this ZIP are the prepared payload for review.
+## Publication
+Source: https://github.com/trustNOpeps/bourn
+Demo: https://trustnopeps.github.io/trustNOpeps/bourn/
+Portfolio entry: https://trustnopeps.github.io/trustNOpeps/
 
-## Package
-source/: editable application and documentation.
-static-preview/: export for /trustNOpeps/bourn/ (serve under that path).
-portfolio-integration/: prepared HTML and README changes; preserve other remote changes when publishing.
-
-No node_modules, build cache, credentials, customer records or original private .env files are included. The archive contains original project illustrations, application code, product notes and a fresh-install SQL baseline. Review before public release.
+The user explicitly authorized public code, assets and documentation. This release is a functional portfolio prototype; no commercial booking readiness is claimed.

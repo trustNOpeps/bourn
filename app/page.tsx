@@ -48,7 +48,7 @@ export default function Home() {
               How It Works
             </a>
             <a href="/plan" className="hover:opacity-100">
-              My Trip
+              Trip planner
             </a>
             <a
               href="/plan"
@@ -76,9 +76,10 @@ export default function Home() {
       <section className="relative flex min-h-screen items-end overflow-hidden">
         <Image fill sizes="(max-width: 768px) 100vw, 60vw"
   src="/images/home/hero.webp"
+  priority
   alt=""
   aria-hidden="true"
-  className="absolute inset-0 h-full w-full object-cover"
+  className="bourn-hero-image absolute inset-0 h-full w-full object-cover"
 />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_35%,rgba(120,110,85,0.28),transparent_32%),radial-gradient(circle_at_20%_80%,rgba(70,75,60,0.18),transparent_35%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(11,11,10,0.35),rgba(11,11,10,0.72)_70%,#0b0b0a_100%)]" />
@@ -89,7 +90,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-40 lg:px-10 lg:pb-24">
           <div className="max-w-5xl">
             <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/70">
-              Bali Travel Planning & Concierge
+              Bali Travel Planning & Concierge · Preview
             </p>
 
             <h1 className="max-w-4xl text-[clamp(4rem,10vw,9rem)] font-medium leading-[0.84] tracking-[-0.055em]">
@@ -253,12 +254,12 @@ export default function Home() {
           <div>Boutique Stay</div>
         </div>
 
-        <button
-          type="button"
+        <Link
+          href="/plan"
           className="mt-12 text-sm font-medium transition-opacity hover:opacity-60"
         >
-          Explore Stays <span className="ml-2">→</span>
-        </button>
+          Plan your stay <span className="ml-2">→</span>
+        </Link>
       </div>
 
       <div>
@@ -328,12 +329,12 @@ export default function Home() {
           <div>Scooter Rental</div>
         </div>
 
-        <button
-          type="button"
+        <Link
+          href="/plan"
           className="mt-12 text-sm font-medium transition-opacity hover:opacity-60"
         >
-          Explore Transport <span className="ml-2">→</span>
-        </button>
+          Plan your transport <span className="ml-2">→</span>
+        </Link>
       </div>
 
       <div>
@@ -406,12 +407,12 @@ export default function Home() {
           <div>Nightlife</div>
         </div>
 
-        <button
-          type="button"
+        <Link
+          href="/plan"
           className="mt-12 text-sm font-medium transition-opacity hover:opacity-60"
         >
-          Explore Experiences <span className="ml-2">→</span>
-        </button>
+          Plan your experiences <span className="ml-2">→</span>
+        </Link>
       </div>
 
       <div>
@@ -683,7 +684,7 @@ export default function Home() {
         </a>
 
         <a href="/plan" className="transition-colors hover:text-white">
-          My Trip
+          Trip planner
         </a>
 
         <a href="/plan" className="transition-colors hover:text-white">
