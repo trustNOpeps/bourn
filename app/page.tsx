@@ -27,11 +27,11 @@ export default function Home() {
             : "border-transparent bg-transparent text-[#f5f3ee]"
         }`}
       >
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
     <Link
   href="/"
   aria-label="BOURN. home"
-  className="text-xl font-medium tracking-[0.28em]"
+  className="text-lg font-medium tracking-[0.14em] sm:text-xl sm:tracking-[0.28em]"
 >
   BOURN.
 </Link>
@@ -62,14 +62,22 @@ export default function Home() {
             </a>
           </nav>
 
-          <a
-            href="/plan"
-            className={`rounded-full border px-4 py-2 text-sm md:hidden ${
-              pastHero ? "border-black/20" : "border-white/20"
-            }`}
-          >
-            Plan
-          </a>
+          <nav aria-label="Mobile navigation" className="flex items-center gap-2 md:hidden">
+            <a
+              href="#journey"
+              className="inline-flex min-h-11 items-center justify-center px-2 text-sm font-medium"
+            >
+              Explore
+            </a>
+            <a
+              href="/plan"
+              className={`inline-flex min-h-11 items-center justify-center rounded-full border px-3 text-sm ${
+                pastHero ? "border-black/20" : "border-white/20"
+              }`}
+            >
+              Plan
+            </a>
+          </nav>
         </div>
       </header>
 
