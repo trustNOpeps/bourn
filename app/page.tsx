@@ -27,11 +27,11 @@ export default function Home() {
             : "border-transparent bg-transparent text-[#f5f3ee]"
         }`}
       >
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
     <Link
   href="/"
   aria-label="BOURN. home"
-  className="text-lg font-medium tracking-[0.14em] sm:text-xl sm:tracking-[0.28em]"
+  className="text-xl font-medium tracking-[0.28em]"
 >
   BOURN.
 </Link>
@@ -62,22 +62,14 @@ export default function Home() {
             </a>
           </nav>
 
-          <nav aria-label="Mobile navigation" className="flex items-center gap-2 md:hidden">
-            <a
-              href="#journey"
-              className="inline-flex min-h-11 items-center justify-center px-2 text-sm font-medium"
-            >
-              Explore
-            </a>
-            <a
-              href="/plan"
-              className={`inline-flex min-h-11 items-center justify-center rounded-full border px-3 text-sm ${
-                pastHero ? "border-black/20" : "border-white/20"
-              }`}
-            >
-              Plan
-            </a>
-          </nav>
+          <a
+            href="/plan"
+            className={`rounded-full border px-4 py-2 text-sm md:hidden ${
+              pastHero ? "border-black/20" : "border-white/20"
+            }`}
+          >
+            Plan
+          </a>
         </div>
       </header>
 
@@ -137,30 +129,7 @@ export default function Home() {
         </div>
       </section>
 
-            <nav className="bourn-chapter-index" aria-label="Explore the six chapters of BOURN">
-        <div className="bourn-chapter-heading">
-          <span>THE JOURNEY / SIX CHAPTERS</span>
-          <span className="bourn-swipe-cue">SWIPE TO EXPLORE <span aria-hidden="true">↔</span></span>
-        </div>
-        <div className="bourn-chapter-track">
-          {[
-            ["01", "Arrive", "#journey"],
-            ["02", "Stay", "#stay"],
-            ["03", "Move", "#move"],
-            ["04", "Experience", "#experience"],
-            ["05", "Budget", "#budget"],
-            ["06", "Arrange", "#arrange"],
-          ].map(([number, label, target]) => (
-            <a key={number} href={target} className="bourn-chapter-link">
-              <span className="bourn-chapter-number">{number}</span>
-              <span className="bourn-chapter-name">{label}</span>
-              <span className="bourn-chapter-arrow" aria-hidden="true">↗</span>
-            </a>
-          ))}
-        </div>
-      </nav>
-
-<section id="journey" className="bg-[#e9e5dc] text-[#11110f]">
+      <section id="journey" className="bg-[#e9e5dc] text-[#11110f]">
         <div className="mx-auto max-w-7xl px-6 pb-24 pt-36 lg:px-10 lg:pb-32 lg:pt-44">
           <div className="grid gap-16 lg:grid-cols-[0.3fr_0.7fr]">
             <div className="lg:sticky lg:top-32 lg:h-fit">
@@ -258,7 +227,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="stay" className="bg-[#e9e5dc] text-[#11110f]">
+      <section className="bg-[#e9e5dc] text-[#11110f]">
   <div className="mx-auto max-w-7xl px-6 pb-24 pt-28 lg:px-10 lg:pb-32 lg:pt-36">
     <div className="grid gap-16 lg:grid-cols-[0.3fr_0.7fr]">
       <div className="lg:sticky lg:top-32 lg:h-fit">
@@ -333,7 +302,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<section id="move" className="bg-[#e9e5dc] text-[#11110f]">
+<section className="bg-[#e9e5dc] text-[#11110f]">
   <div className="mx-auto max-w-7xl px-6 pb-24 pt-28 lg:px-10 lg:pb-32 lg:pt-36">
     <div className="grid gap-16 lg:grid-cols-[0.3fr_0.7fr]">
       <div className="lg:sticky lg:top-32 lg:h-fit">
@@ -408,7 +377,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<section id="experience" className="bg-[#e9e5dc] text-[#11110f]">
+<section className="bg-[#e9e5dc] text-[#11110f]">
   <div className="mx-auto max-w-7xl px-6 pb-24 pt-28 lg:px-10 lg:pb-32 lg:pt-36">
     <div className="grid gap-16 lg:grid-cols-[0.3fr_0.7fr]">
       <div className="lg:sticky lg:top-32 lg:h-fit">
@@ -486,7 +455,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<section id="budget" className="bg-[#11110f] text-[#f5f3ee]">
+<section className="bg-[#11110f] text-[#f5f3ee]">
   <div className="mx-auto max-w-7xl px-6 py-28 lg:px-10 lg:py-36">
     <div className="grid gap-16 lg:grid-cols-[0.3fr_0.7fr]">
       <div>
@@ -571,7 +540,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<section id="arrange" className="bg-[#e9e5dc] text-[#11110f]">
+<section className="bg-[#e9e5dc] text-[#11110f]">
   <div className="mx-auto max-w-7xl px-6 py-28 lg:px-10 lg:py-36">
     <div className="grid gap-16 lg:grid-cols-[0.3fr_0.7fr]">
       <div>
